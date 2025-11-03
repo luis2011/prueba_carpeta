@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+   <header>
+    <nav >
+        <ul class="menu" >
+          <li>
+            <a href="{{ url_for('index')}}">Home</a>
+          </li>
+              <li>
+                <a href="{{ url_for('xmen')}}">X-men</a>
+              </li>
+            <li >
+                <a href="{{ url_for('deadpool')}}">DeadPool</a>
+                <!-- url_for va a buscar la función en nuestro main.py -->
+            </li>
+            </ul>
+       </nav>
+      </header>
+   
+
+      <main>
+        <!-- aqui cargamos nuestro main que se encuentra entre el header y el footer -->
+        {% block content %} {% endblock %}
+      </main>
+     
+        
+  
+    <!-- <h4>Pie de página</h4> -->
+    <hr>
+    <footer>
+    <ul class="foot">
+      <li>
+        <a href="{{ url_for('index')}}">Home</a>
+      </li>
+          <li>
+            <a href="{{ url_for('xmen')}}">X-men</a>
+          </li>
+        <li >
+            <a href="{{ url_for('deadpool')}}">DeadPool</a>
+            <!-- url_for va a buscar la función en nuestro main.py -->
+        </li>
+        </ul>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<h1> Bienvenidos a la mejor Web de Películas</h1>
+        <div class="imagen">
+                <img src="../static/img/logo.jpg" alt="">
+        </div>
+        <h2>Títulos</h2>
+        {% for pelis in peliculas%}
+        <h3>{{pelis['titulo']}}</h3>
+        {% endfor %}
+
+{% endblock %}
+

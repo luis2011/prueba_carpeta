@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>DEADPOOL </h1>
+<hr>
+<div class="tarjeta">
+{% for x in deadpool %}
+        <div class="tarjeta_alineada"> 
+            <img class="imagen" src="../static/img/{{x['ruta_img']}}" alt="">
+            <h2>{{ x['descripcion']}}</h2>      
+        </div>  
+        {% endfor %}
+    </div>
+{% endblock %}

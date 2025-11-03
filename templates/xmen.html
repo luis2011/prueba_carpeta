@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>X-MEN </h1>
+<hr>
+
+<div class="tarjeta">
+    {% for x in xmen %}
+        <div class="tarjeta_alineada">
+            <img src="../static/img/{{x['ruta_img']}}" alt="">
+             <h2>{{ x['descripcion']}}</h2>
+        </div> 
+    {% endfor %}
+</div>
+{% endblock %}
